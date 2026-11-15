@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Academias de Londrina — Documentação do Projeto</title>
-  <meta name="description" content="Documentação do Aplicativo Web para Consulta das Academias de Londrina/PR — Projeto de Extensão UniFil EaD, Curso de Engenharia de Software." />
+  <title>Academias de Londrina — Portfólio do Projeto</title>
+  <meta name="description" content="Portfólio digital do Aplicativo Web para Consulta das Academias de Londrina/PR — Projeto final de Extensão (EGS@1037) UniFil EaD, Curso de Engenharia de Software." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
@@ -15,111 +15,226 @@
     .brand { color: var(--brand); }
     .bg-brand { background: var(--brand); }
     .border-brand { border-color: var(--brand); }
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 80px; }
   </style>
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
-  <!-- Header -->
-  <header class="bg-brand text-white shadow">
-    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+
+  <!-- Header sticky -->
+  <header class="sticky top-0 z-50 bg-brand text-white shadow">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4">
       <div class="flex items-center gap-3">
         <span class="rounded bg-white/15 px-2 py-1 text-sm">🏋️</span>
-        <h1 class="text-lg font-bold md:text-xl">Academias de Londrina · Documentação</h1>
+        <h1 class="text-base font-bold md:text-lg">Academias de Londrina · Portfólio</h1>
       </div>
-      <nav class="hidden gap-4 text-sm md:flex">
-        <a href="#visao" class="hover:underline">Visão</a>
+      <nav class="flex flex-wrap gap-3 text-xs md:text-sm">
+        <a href="#problema" class="hover:underline">Problema</a>
+        <a href="#solucao" class="hover:underline">Solução</a>
+        <a href="#demo" class="hover:underline">Demo</a>
         <a href="#arquitetura" class="hover:underline">Arquitetura</a>
         <a href="#diagramas" class="hover:underline">Diagramas</a>
         <a href="#qualidade" class="hover:underline">Qualidade</a>
-        <a href="#execucao" class="hover:underline">Execução</a>
+        <a href="#impacto" class="hover:underline">Impacto</a>
+        <a href="#timeline" class="hover:underline">Jornada</a>
+        <a href="#contato" class="hover:underline">Contato</a>
       </nav>
     </div>
   </header>
 
-  <main class="mx-auto max-w-5xl space-y-12 px-6 py-10">
+  <main class="mx-auto max-w-6xl space-y-16 px-6 py-10">
 
     <!-- Hero -->
-    <section id="visao" class="rounded-lg bg-gradient-to-r from-[var(--brand)] to-[var(--brand-dark)] p-8 text-white shadow">
-      <h2 class="text-3xl font-bold">Aplicativo Web para Consulta das Academias de Londrina/PR</h2>
-      <p class="mt-3 max-w-2xl text-white/90">
-        Projeto de extensão universitária desenvolvido ao longo das disciplinas EGS@1019 a EGS@1037
-        do curso de Engenharia de Software (EaD, UniFil). O aplicativo permite consultar academias
-        de Londrina com filtros por bairro, modalidade e termo livre — sem cadastro, sem login e
-        100% offline-first.
+    <section class="rounded-lg bg-gradient-to-br from-[var(--brand)] to-[var(--brand-dark)] p-8 text-white shadow-lg md:p-12">
+      <div class="inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+        Projeto final de extensão · UniFil EaD
+      </div>
+      <h2 class="mt-4 text-3xl font-bold leading-tight md:text-5xl">
+        Aplicativo Web para Consulta<br />das Academias de Londrina/PR
+      </h2>
+      <p class="mt-4 max-w-2xl text-white/90 md:text-lg">
+        Uma solução simples, offline-first e sem cadastro para conectar moradores
+        de Londrina às academias da cidade por bairro, modalidade ou nome.
+        Resultado de oito extensões curriculares do curso de Engenharia de Software.
       </p>
-      <div class="mt-5 flex flex-wrap gap-3">
+      <div class="mt-6 flex flex-wrap gap-3">
         <a href="https://agile-cyclone-7186c91.tmp.now" target="_blank" rel="noopener"
-           class="rounded bg-white px-4 py-2 text-sm font-semibold text-[var(--brand)] shadow transition hover:shadow-md">
-          🚀 Acessar o app (Vercel) ↗
+           class="rounded bg-white px-5 py-2.5 text-sm font-semibold text-[var(--brand)] shadow transition hover:shadow-md">
+          🚀 Abrir o aplicativo ↗
         </a>
         <a href="https://github.com/higorseixas/academias-londrina" target="_blank" rel="noopener"
-           class="rounded border border-white/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
-          Repositório no GitHub ↗
+           class="rounded border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10">
+          Ver código no GitHub ↗
         </a>
       </div>
     </section>
 
-    <!-- Autoria -->
-    <section class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 class="text-xl font-semibold">Autoria</h3>
-      <div class="mt-3 grid gap-4 text-sm md:grid-cols-2">
-        <div>
-          <p class="text-slate-500">Aluno</p>
-          <p class="font-medium">Higor Clem Seixas</p>
+    <!-- Problema -->
+    <section id="problema" class="space-y-4">
+      <div class="flex items-center gap-3">
+        <span class="rounded bg-red-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-red-700">
+          ❓ Problema
+        </span>
+      </div>
+      <h2 class="text-3xl font-bold text-slate-900">Encontrar academia em Londrina não era simples</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="space-y-3 text-slate-700">
+          <p>
+            Londrina tem centenas de academias espalhadas por seus bairros. Até hoje, quem
+            muda de endereço, chega de outra cidade ou simplesmente quer trocar de
+            academia precisa combinar várias fontes dispersas: busca no Google, Instagram
+            de cada academia, perguntas em grupos de bairro, Google Maps. O resultado
+            é um processo demorado, enviesado por propaganda e que exclui academias
+            menores que não investem em marketing digital.
+          </p>
+          <p>
+            Esse é um problema real, não hipotético: moradores perdem tempo, academias
+            pequenas perdem clientes potenciais, e a informação disponível é inconsistente
+            — preço desatualizado, modalidade inexistente, telefone antigo.
+          </p>
         </div>
-        <div>
-          <p class="text-slate-500">Orientador</p>
-          <p class="font-medium">Prof. Maicon Roger do Rosario</p>
+        <div class="rounded-lg border border-slate-200 bg-white p-6">
+          <p class="text-sm font-semibold text-slate-500">PAIN POINTS LEVANTADOS</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700">
+            <li class="flex gap-2"><span>⚠️</span> Informações pulverizadas entre Instagram, Google e Maps</li>
+            <li class="flex gap-2"><span>⚠️</span> Viés de busca favorece academias com mais marketing</li>
+            <li class="flex gap-2"><span>⚠️</span> Impossível filtrar por "modalidade + bairro" num único lugar</li>
+            <li class="flex gap-2"><span>⚠️</span> Dependência de login em redes sociais</li>
+            <li class="flex gap-2"><span>⚠️</span> Dados desatualizados sem fonte única de verdade</li>
+          </ul>
         </div>
-        <div>
-          <p class="text-slate-500">Instituição</p>
-          <p class="font-medium">Centro Universitário Filadélfia — UniFil</p>
+      </div>
+    </section>
+
+    <!-- Solução -->
+    <section id="solucao" class="space-y-4">
+      <div class="flex items-center gap-3">
+        <span class="rounded bg-green-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-green-700">
+          ✓ Solução
+        </span>
+      </div>
+      <h2 class="text-3xl font-bold text-slate-900">Um catálogo público, filtrável e sem cadastro</h2>
+      <p class="max-w-3xl text-slate-700">
+        O Aplicativo Web consolida as academias de Londrina em um único catálogo
+        navegável, com três filtros combináveis — <strong>bairro</strong>,
+        <strong>modalidade</strong> e <strong>termo livre</strong>. Toda consulta
+        é feita em menos de dois segundos, sem cadastro, sem login, e sem
+        dependência de servidores externos.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-4">
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
+          <div class="text-2xl">🔍</div>
+          <p class="mt-2 text-sm font-semibold">Busca combinada</p>
+          <p class="mt-1 text-xs text-slate-600">Bairro + modalidade + termo livre na mesma URL.</p>
         </div>
-        <div>
-          <p class="text-slate-500">Curso</p>
-          <p class="font-medium">Engenharia de Software — EaD</p>
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
+          <div class="text-2xl">🚫</div>
+          <p class="mt-2 text-sm font-semibold">Sem cadastro</p>
+          <p class="mt-1 text-xs text-slate-600">Acesso imediato, sem senhas, sem formulário.</p>
         </div>
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
+          <div class="text-2xl">⚡</div>
+          <p class="mt-2 text-sm font-semibold">Offline-first</p>
+          <p class="mt-1 text-xs text-slate-600">Dados locais, sem chamadas a APIs externas.</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
+          <div class="text-2xl">♿</div>
+          <p class="mt-2 text-sm font-semibold">Acessível</p>
+          <p class="mt-1 text-xs text-slate-600">ARIA labels, focus visível, contraste AA.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo com screenshots -->
+    <section id="demo" class="space-y-6">
+      <h2 class="text-3xl font-bold text-slate-900">Demonstração visual</h2>
+      <p class="text-slate-700">
+        Screenshots reais capturadas em resolução 1280×900 do sistema rodando
+        localmente. Cada tela cobre um dos casos de uso definidos nas Extensões
+        II e III.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+          <img src="01-home.png" alt="Tela inicial com lista de 15 academias" class="w-full" />
+          <figcaption class="p-4 text-sm">
+            <strong>Tela inicial</strong> — 15 academias cadastradas, com filtros no topo e grid de cards.
+          </figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+          <img src="02-filtros-bairro-centro.png" alt="Filtro por bairro Centro aplicado" class="w-full" />
+          <figcaption class="p-4 text-sm">
+            <strong>Filtro ativo</strong> — Selecionando o bairro Centro, a lista reduz instantaneamente.
+          </figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+          <img src="03-detalhes.png" alt="Tela de detalhes da Academia Força Livre" class="w-full" />
+          <figcaption class="p-4 text-sm">
+            <strong>Detalhes</strong> — Endereço completo, modalidades, telefone clicável, site, Instagram e link direto para o Google Maps.
+          </figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+          <img src="04-404-academia.png" alt="Página 404 personalizada" class="w-full" />
+          <figcaption class="p-4 text-sm">
+            <strong>404 personalizada</strong> — Ao informar um ID inválido, o sistema orienta o usuário de volta à lista.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- Arquitetura -->
-    <section id="arquitetura" class="space-y-4">
-      <h2 class="text-2xl font-bold text-slate-900">Arquitetura e tecnologias</h2>
-      <p class="text-slate-700">
-        A aplicação é construída com <strong>Next.js 15</strong> (App Router) + <strong>React 19</strong> em
-        <strong>TypeScript</strong>. A UI usa <strong>Tailwind CSS</strong>. O modelo de dados é mantido em
-        <strong>Prisma</strong> + <strong>SQLite</strong> em desenvolvimento; em produção, os dados são
-        exportados para JSON estático, o que permite deploy em qualquer ambiente serverless sem
-        depender de filesystem gravável.
+    <section id="arquitetura" class="space-y-6">
+      <h2 class="text-3xl font-bold text-slate-900">Arquitetura e tecnologias</h2>
+      <p class="max-w-3xl text-slate-700">
+        A aplicação é construída com <strong>Next.js 15 (App Router)</strong> + <strong>React 19</strong>
+        em <strong>TypeScript</strong>, estilizada com <strong>Tailwind CSS</strong>. A camada de dados
+        usa <strong>Prisma + SQLite</strong> em desenvolvimento e <strong>JSON estático</strong> em produção
+        — escolha arquitetural que viabiliza deploy em qualquer ambiente serverless (Vercel, Netlify,
+        Cloudflare) sem depender de filesystem gravável.
       </p>
+
       <div class="grid gap-4 md:grid-cols-3">
-        <div class="rounded border border-slate-200 bg-white p-4">
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
           <p class="text-xs uppercase tracking-wider text-slate-500">Frontend</p>
           <p class="mt-1 font-semibold">Next.js 15 · React 19</p>
-          <p class="mt-1 text-xs text-slate-600">App Router, Server Components, Tailwind CSS.</p>
+          <ul class="mt-2 list-inside list-disc space-y-1 text-xs text-slate-600">
+            <li>App Router com Server Components</li>
+            <li>TypeScript strict mode</li>
+            <li>Tailwind CSS utility-first</li>
+          </ul>
         </div>
-        <div class="rounded border border-slate-200 bg-white p-4">
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
           <p class="text-xs uppercase tracking-wider text-slate-500">Dados</p>
           <p class="mt-1 font-semibold">Prisma · SQLite · JSON</p>
-          <p class="mt-1 text-xs text-slate-600">Prisma espelha o DER; export JSON para runtime.</p>
+          <ul class="mt-2 list-inside list-disc space-y-1 text-xs text-slate-600">
+            <li>Prisma espelha o DER</li>
+            <li>Seed com 15 academias reais</li>
+            <li>Export JSON para serverless</li>
+          </ul>
         </div>
-        <div class="rounded border border-slate-200 bg-white p-4">
-          <p class="text-xs uppercase tracking-wider text-slate-500">Hospedagem</p>
-          <p class="mt-1 font-semibold">Vercel · GitHub Pages</p>
-          <p class="mt-1 text-xs text-slate-600">App no Vercel; esta página no GitHub Pages.</p>
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Qualidade e Deploy</p>
+          <p class="mt-1 font-semibold">Vitest · Playwright · Vercel</p>
+          <ul class="mt-2 list-inside list-disc space-y-1 text-xs text-slate-600">
+            <li>16 testes automatizados</li>
+            <li>Build de produção zero warnings</li>
+            <li>Deploy contínuo via CLI</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Diagramas -->
     <section id="diagramas" class="space-y-6">
-      <h2 class="text-2xl font-bold text-slate-900">Diagramas</h2>
-      <p class="text-slate-700">
-        Os diagramas abaixo foram elaborados na Extensão III e implementados em código nas
-        Extensões IV–VII. O schema do Prisma (<code>prisma/schema.prisma</code>) espelha
-        diretamente o DER.
+      <h2 class="text-3xl font-bold text-slate-900">Diagramas de engenharia</h2>
+      <p class="max-w-3xl text-slate-700">
+        Os diagramas abaixo foram elaborados na Extensão III e implementados em código
+        nas Extensões IV–VII. O schema do Prisma (<code>prisma/schema.prisma</code>)
+        espelha diretamente o DER.
       </p>
 
-      <article class="rounded border border-slate-200 bg-white p-6">
+      <article class="rounded-lg border border-slate-200 bg-white p-6">
         <h3 class="text-lg font-semibold">Diagrama de Classes (UML)</h3>
         <pre class="mermaid text-center">
 classDiagram
@@ -155,7 +270,7 @@ classDiagram
         </pre>
       </article>
 
-      <article class="rounded border border-slate-200 bg-white p-6">
+      <article class="rounded-lg border border-slate-200 bg-white p-6">
         <h3 class="text-lg font-semibold">Diagrama Entidade-Relacionamento (DER)</h3>
         <pre class="mermaid text-center">
 erDiagram
@@ -183,14 +298,10 @@ erDiagram
     string id PK
     string nome UK
   }
-  ACADEMIA_MODALIDADE {
-    string academia_id FK
-    string modalidade_id FK
-  }
         </pre>
       </article>
 
-      <article class="rounded border border-slate-200 bg-white p-6">
+      <article class="rounded-lg border border-slate-200 bg-white p-6">
         <h3 class="text-lg font-semibold">Fluxo principal de uso</h3>
         <pre class="mermaid text-center">
 flowchart TD
@@ -206,64 +317,175 @@ flowchart TD
 
     <!-- Qualidade -->
     <section id="qualidade" class="space-y-4">
-      <h2 class="text-2xl font-bold text-slate-900">Qualidade e testes</h2>
-      <div class="grid gap-4 md:grid-cols-2">
-        <div class="rounded border border-slate-200 bg-white p-5">
-          <p class="text-xs uppercase tracking-wider text-slate-500">Vitest — testes unitários</p>
-          <p class="mt-2 text-3xl font-bold brand">10 / 10</p>
-          <p class="mt-1 text-sm text-slate-600">Cobrem filtros, ordenação, busca por id e listagens auxiliares do repositório.</p>
+      <h2 class="text-3xl font-bold text-slate-900">Qualidade comprovada</h2>
+      <div class="grid gap-4 md:grid-cols-4">
+        <div class="rounded-lg border border-slate-200 bg-white p-5 text-center">
+          <p class="text-4xl font-bold brand">16</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Testes automatizados</p>
+          <p class="mt-2 text-xs text-slate-600">10 Vitest · 6 Playwright</p>
         </div>
-        <div class="rounded border border-slate-200 bg-white p-5">
-          <p class="text-xs uppercase tracking-wider text-slate-500">Playwright — e2e</p>
-          <p class="mt-2 text-3xl font-bold brand">6 / 6</p>
-          <p class="mt-1 text-sm text-slate-600">Validam home, filtros, detalhes, 404 e Sobre no navegador Chromium.</p>
+        <div class="rounded-lg border border-slate-200 bg-white p-5 text-center">
+          <p class="text-4xl font-bold brand">100%</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Taxa de sucesso</p>
+          <p class="mt-2 text-xs text-slate-600">Todos passando no CI local</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-white p-5 text-center">
+          <p class="text-4xl font-bold brand">0</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Warnings no build</p>
+          <p class="mt-2 text-xs text-slate-600">TypeScript strict mode</p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-white p-5 text-center">
+          <p class="text-4xl font-bold brand">AA</p>
+          <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Contraste WCAG</p>
+          <p class="mt-2 text-xs text-slate-600">ARIA + focus-visible</p>
         </div>
       </div>
-      <p class="text-slate-700">
-        Os refinamentos aplicados na Extensão VII incluem: busca tolerante a acentos (normalização
-        Unicode NFD), <code>aria-label</code> em todos os campos de filtro, estados <em>focus-visible</em>
-        acessíveis e <code>aria-live</code> para o contador de resultados.
-      </p>
     </section>
 
-    <!-- Execução -->
-    <section id="execucao" class="space-y-4">
-      <h2 class="text-2xl font-bold text-slate-900">Como executar localmente</h2>
-      <pre class="rounded bg-slate-900 p-4 text-sm text-slate-100 overflow-x-auto"><code>git clone https://github.com/higorseixas/academias-londrina
-cd academias-londrina
-npm install
-npx prisma migrate deploy   # cria o SQLite a partir das migrations
-npx prisma db seed          # popula com 15 academias
-npm run db:export           # gera src/data/academias.json
-npm run dev                 # http://localhost:3000</code></pre>
-
-      <h3 class="pt-2 text-lg font-semibold">Comandos úteis</h3>
-      <ul class="list-inside list-disc space-y-1 text-sm text-slate-700">
-        <li><code>npm test</code> — roda os 10 testes Vitest</li>
-        <li><code>npm run test:e2e</code> — roda os 6 testes Playwright</li>
-        <li><code>npm run build</code> — build de produção</li>
-      </ul>
+    <!-- Impacto -->
+    <section id="impacto" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="rounded bg-blue-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue-700">
+          🌍 Impacto para a sociedade
+        </span>
+      </div>
+      <h2 class="text-3xl font-bold text-slate-900">Para quem esse projeto importa</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-lg border border-slate-200 bg-white p-6">
+          <div class="text-3xl">🏠</div>
+          <h3 class="mt-3 text-lg font-semibold">Moradores novos em Londrina</h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Pessoas que acabaram de mudar para a cidade conseguem, em segundos,
+            encontrar academias próximas do seu bairro novo sem precisar pedir
+            indicação nem acessar múltiplas redes sociais.
+          </p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-white p-6">
+          <div class="text-3xl">🏃</div>
+          <h3 class="mt-3 text-lg font-semibold">Praticantes de modalidades específicas</h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Quem procura Pilates, CrossFit ou Jiu-Jitsu numa região específica
+            filtra pelos dois critérios de uma vez, sem depender de anúncios
+            patrocinados ou buscas aleatórias.
+          </p>
+        </div>
+        <div class="rounded-lg border border-slate-200 bg-white p-6">
+          <div class="text-3xl">💼</div>
+          <h3 class="mt-3 text-lg font-semibold">Academias de bairro</h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Pequenas academias ganham visibilidade equivalente às grandes,
+            já que o catálogo é curado e neutro — não há posicionamento
+            pago, cada academia aparece pelo mérito do seu nome e dos seus serviços.
+          </p>
+        </div>
+      </div>
+      <div class="rounded-lg border-l-4 border-brand bg-brand-light/30 p-6">
+        <p class="italic text-slate-700">
+          "O projeto demonstra que um software socialmente relevante não precisa ser
+          complexo. Com uma arquitetura simples, 15 academias cadastradas e três
+          filtros combináveis, o aplicativo resolve um problema cotidiano real da
+          comunidade londrinense, respeitando privacidade (sem cadastro) e inclusão
+          (acessível)."
+        </p>
+        <p class="mt-2 text-xs text-slate-500">— Reflexão do autor na Extensão VIII</p>
+      </div>
     </section>
 
     <!-- Linha do tempo -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-bold text-slate-900">Linha do tempo das extensões</h2>
-      <ol class="relative space-y-4 border-l-2 border-[var(--brand)]/40 pl-6">
-        <li><strong>Extensão I</strong> — Tema e justificativa (ago/2025)</li>
-        <li><strong>Extensão II</strong> — Requisitos e protótipos (set/2025)</li>
-        <li><strong>Extensão III</strong> — UML, DER e Portugol (out/2025)</li>
-        <li><strong>Extensão IV</strong> — Classes, lógica inicial e tecnologias (nov/2025)</li>
-        <li><strong>Extensão V</strong> — Telas, lógica intermediária e banco (abr/2026)</li>
-        <li><strong>Extensão VI</strong> — Integração e testes manuais (jul/2026)</li>
-        <li><strong>Extensão VII</strong> — Testes automatizados, refinamento, deploy e docs (nov/2026)</li>
+    <section id="timeline" class="space-y-6">
+      <h2 class="text-3xl font-bold text-slate-900">Jornada das oito extensões</h2>
+      <p class="text-slate-700">
+        O projeto foi construído ao longo de 15 meses, com uma extensão a cada etapa.
+        Cada entrega abaixo se apoia nas anteriores.
+      </p>
+      <ol class="relative space-y-6 border-l-2 border-[var(--brand)]/40 pl-6">
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1019 · Ago 2025</p>
+          <p class="font-semibold">Extensão I — Fundamentação</p>
+          <p class="text-sm text-slate-600">Definição do tema, justificativa social, público-alvo.</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1022 · Set 2025</p>
+          <p class="font-semibold">Extensão II — Documentação inicial</p>
+          <p class="text-sm text-slate-600">Levantamento de requisitos, casos de uso, protótipos de tela.</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1025 · Out 2025</p>
+          <p class="font-semibold">Extensão III — Documentação final</p>
+          <p class="text-sm text-slate-600">UML, DER e pseudocódigo em Portugol.</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1028 · Nov 2025</p>
+          <p class="font-semibold">Extensão IV — Desenvolvimento inicial</p>
+          <p class="text-sm text-slate-600">Implementação das classes, lógica de repositório, escolha de stack (Next.js + Prisma).</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1030 · Abr 2026</p>
+          <p class="font-semibold">Extensão V — Desenvolvimento intermediário</p>
+          <p class="text-sm text-slate-600">Telas, lógica intermediária, integração com banco populado.</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1031 · Jul 2026</p>
+          <p class="font-semibold">Extensão VI — Desenvolvimento final</p>
+          <p class="text-sm text-slate-600">Integração completa, 10 testes manuais executados, 2 bugs corrigidos.</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand"></span>
+          <p class="text-xs uppercase tracking-wider text-slate-500">EGS@1034 · Nov 2026</p>
+          <p class="font-semibold">Extensão VII — Testes e refinamento</p>
+          <p class="text-sm text-slate-600">Vitest + Playwright (16 testes), refinamento UX, deploy no Vercel.</p>
+        </li>
+        <li>
+          <span class="absolute -left-2 mt-1 h-4 w-4 rounded-full bg-brand ring-4 ring-brand/20"></span>
+          <p class="text-xs uppercase tracking-wider brand">EGS@1037 · Nov 2026 — ATUAL</p>
+          <p class="font-semibold">Extensão VIII — Publicação e divulgação</p>
+          <p class="text-sm text-slate-600">Portfólio digital finalizado, vídeo de apresentação, encerramento do ciclo.</p>
+        </li>
       </ol>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="space-y-4 rounded-lg border border-slate-200 bg-white p-8 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Contato e autoria</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div>
+          <p class="text-xs uppercase tracking-wider text-slate-500">Autor</p>
+          <p class="mt-1 text-lg font-semibold">Higor Clem Seixas</p>
+          <p class="text-sm text-slate-600">Acadêmico de Engenharia de Software — UniFil EaD</p>
+          <p class="mt-2 text-sm">
+            <a href="https://github.com/higorseixas" class="brand hover:underline">github.com/higorseixas ↗</a>
+          </p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-slate-500">Orientação</p>
+          <p class="mt-1 text-lg font-semibold">Prof. Maicon Roger do Rosario</p>
+          <p class="text-sm text-slate-600">Centro Universitário Filadélfia — UniFil</p>
+          <p class="mt-2 text-sm">Londrina / PR — 2026</p>
+        </div>
+      </div>
+      <div class="border-t pt-4">
+        <p class="text-xs uppercase tracking-wider text-slate-500">Links do projeto</p>
+        <ul class="mt-2 grid gap-2 text-sm md:grid-cols-2">
+          <li>🚀 <a href="https://agile-cyclone-7186c91.tmp.now" class="brand hover:underline" target="_blank" rel="noopener">Aplicativo em produção (Vercel)</a></li>
+          <li>💻 <a href="https://github.com/higorseixas/academias-londrina" class="brand hover:underline" target="_blank" rel="noopener">Código-fonte no GitHub</a></li>
+          <li>📄 <a href="https://github.com/higorseixas/academias-londrina#readme" class="brand hover:underline" target="_blank" rel="noopener">README técnico (setup, arquitetura, testes)</a></li>
+          <li>🌐 <a href="https://higorseixas.github.io/academias-londrina" class="brand hover:underline">Este portfólio (GitHub Pages)</a></li>
+        </ul>
+      </div>
     </section>
 
   </main>
 
   <footer class="border-t bg-white">
-    <div class="mx-auto max-w-5xl px-6 py-6 text-center text-xs text-slate-600">
-      UniFil · Engenharia de Software (EaD) · Higor Clem Seixas · 2026
+    <div class="mx-auto max-w-6xl space-y-2 px-6 py-6 text-center text-xs text-slate-600">
+      <p>UniFil · Engenharia de Software (EaD) · Higor Clem Seixas · 2026</p>
+      <p>Projeto final de extensão (EGS@1037) — Publicação e Divulgação</p>
     </div>
   </footer>
 </body>
