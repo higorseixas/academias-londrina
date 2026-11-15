@@ -3,7 +3,7 @@
 > Projeto de extensão universitária — Centro Universitário Filadélfia (UniFil),
 > Curso Superior de Engenharia de Software, modalidade EaD.
 
-[![Deploy](https://img.shields.io/badge/vercel-live-black?logo=vercel)](https://agile-cyclone-7186c91.tmp.now)
+[![Deploy](https://img.shields.io/badge/vercel-live-black?logo=vercel)](https://webapp-six-wheat.vercel.app)
 [![Docs](https://img.shields.io/badge/github%20pages-docs-2088FF?logo=github)](https://higorseixas.github.io/academias-londrina/)
 
 ## Sumário
@@ -164,7 +164,7 @@ npm run test:e2e
 
 ### Aplicação (Next.js)
 
-- **Produção:** Vercel ([acessar](https://agile-cyclone-7186c91.tmp.now))
+- **Produção:** Vercel ([acessar](https://webapp-six-wheat.vercel.app))
 - **Como refazer um deploy:**
   ```bash
   vercel deploy --prod
