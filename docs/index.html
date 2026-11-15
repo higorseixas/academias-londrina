@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academias de Londrina — Documentação do Projeto</title>
+  <meta name="description" content="Documentação do Aplicativo Web para Consulta das Academias de Londrina/PR — Projeto de Extensão UniFil EaD, Curso de Engenharia de Software." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+  <style>
+    :root { --brand: #EA5B0C; --brand-dark: #B8480A; }
+    .brand { color: var(--brand); }
+    .bg-brand { background: var(--brand); }
+    .border-brand { border-color: var(--brand); }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+  <!-- Header -->
+  <header class="bg-brand text-white shadow">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+      <div class="flex items-center gap-3">
+        <span class="rounded bg-white/15 px-2 py-1 text-sm">🏋️</span>
+        <h1 class="text-lg font-bold md:text-xl">Academias de Londrina · Documentação</h1>
+      </div>
+      <nav class="hidden gap-4 text-sm md:flex">
+        <a href="#visao" class="hover:underline">Visão</a>
+        <a href="#arquitetura" class="hover:underline">Arquitetura</a>
+        <a href="#diagramas" class="hover:underline">Diagramas</a>
+        <a href="#qualidade" class="hover:underline">Qualidade</a>
+        <a href="#execucao" class="hover:underline">Execução</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl space-y-12 px-6 py-10">
+
+    <!-- Hero -->
+    <section id="visao" class="rounded-lg bg-gradient-to-r from-[var(--brand)] to-[var(--brand-dark)] p-8 text-white shadow">
+      <h2 class="text-3xl font-bold">Aplicativo Web para Consulta das Academias de Londrina/PR</h2>
+      <p class="mt-3 max-w-2xl text-white/90">
+        Projeto de extensão universitária desenvolvido ao longo das disciplinas EGS@1019 a EGS@1037
+        do curso de Engenharia de Software (EaD, UniFil). O aplicativo permite consultar academias
+        de Londrina com filtros por bairro, modalidade e termo livre — sem cadastro, sem login e
+        100% offline-first.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="https://agile-cyclone-7186c91.tmp.now" target="_blank" rel="noopener"
+           class="rounded bg-white px-4 py-2 text-sm font-semibold text-[var(--brand)] shadow transition hover:shadow-md">
+          🚀 Acessar o app (Vercel) ↗
+        </a>
+        <a href="https://github.com/higorseixas/academias-londrina" target="_blank" rel="noopener"
+           class="rounded border border-white/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+          Repositório no GitHub ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- Autoria -->
+    <section class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 class="text-xl font-semibold">Autoria</h3>
+      <div class="mt-3 grid gap-4 text-sm md:grid-cols-2">
+        <div>
+          <p class="text-slate-500">Aluno</p>
+          <p class="font-medium">Higor Clem Seixas</p>
+        </div>
+        <div>
+          <p class="text-slate-500">Orientador</p>
+          <p class="font-medium">Prof. Maicon Roger do Rosario</p>
+        </div>
+        <div>
+          <p class="text-slate-500">Instituição</p>
+          <p class="font-medium">Centro Universitário Filadélfia — UniFil</p>
+        </div>
+        <div>
+          <p class="text-slate-500">Curso</p>
+          <p class="font-medium">Engenharia de Software — EaD</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arquitetura -->
+    <section id="arquitetura" class="space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">Arquitetura e tecnologias</h2>
+      <p class="text-slate-700">
+        A aplicação é construída com <strong>Next.js 15</strong> (App Router) + <strong>React 19</strong> em
+        <strong>TypeScript</strong>. A UI usa <strong>Tailwind CSS</strong>. O modelo de dados é mantido em
+        <strong>Prisma</strong> + <strong>SQLite</strong> em desenvolvimento; em produção, os dados são
+        exportados para JSON estático, o que permite deploy em qualquer ambiente serverless sem
+        depender de filesystem gravável.
+      </p>
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="rounded border border-slate-200 bg-white p-4">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Frontend</p>
+          <p class="mt-1 font-semibold">Next.js 15 · React 19</p>
+          <p class="mt-1 text-xs text-slate-600">App Router, Server Components, Tailwind CSS.</p>
+        </div>
+        <div class="rounded border border-slate-200 bg-white p-4">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Dados</p>
+          <p class="mt-1 font-semibold">Prisma · SQLite · JSON</p>
+          <p class="mt-1 text-xs text-slate-600">Prisma espelha o DER; export JSON para runtime.</p>
+        </div>
+        <div class="rounded border border-slate-200 bg-white p-4">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Hospedagem</p>
+          <p class="mt-1 font-semibold">Vercel · GitHub Pages</p>
+          <p class="mt-1 text-xs text-slate-600">App no Vercel; esta página no GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagramas -->
+    <section id="diagramas" class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900">Diagramas</h2>
+      <p class="text-slate-700">
+        Os diagramas abaixo foram elaborados na Extensão III e implementados em código nas
+        Extensões IV–VII. O schema do Prisma (<code>prisma/schema.prisma</code>) espelha
+        diretamente o DER.
+      </p>
+
+      <article class="rounded border border-slate-200 bg-white p-6">
+        <h3 class="text-lg font-semibold">Diagrama de Classes (UML)</h3>
+        <pre class="mermaid text-center">
+classDiagram
+  class Academia {
+    +UUID id
+    +string nome
+    +string? descricao
+    +string? telefone
+    +string? siteUrl
+    +string? instagram
+  }
+  class Endereco {
+    +string rua
+    +string numero
+    +string bairro
+    +string cidade
+    +string estado
+    +string? cep
+    +number? latitude
+    +number? longitude
+  }
+  class Modalidade {
+    +UUID id
+    +string nome
+  }
+  class RepositorioAcademia {
+    +listar(filtro) List~Academia~
+    +obterPorId(id) Academia
+  }
+  Academia "1" *-- "1" Endereco : composicao
+  Academia "N" -- "N" Modalidade : oferece
+  RepositorioAcademia ..> Academia : opera
+        </pre>
+      </article>
+
+      <article class="rounded border border-slate-200 bg-white p-6">
+        <h3 class="text-lg font-semibold">Diagrama Entidade-Relacionamento (DER)</h3>
+        <pre class="mermaid text-center">
+erDiagram
+  ACADEMIA ||--|| ENDERECO : possui
+  ACADEMIA }o--o{ MODALIDADE : oferta
+  ACADEMIA {
+    string id PK
+    string nome
+    string descricao
+    string telefone
+    string site_url
+    string instagram
+  }
+  ENDERECO {
+    string id PK
+    string academia_id FK
+    string rua
+    string numero
+    string bairro
+    string cidade
+    string estado
+    string cep
+  }
+  MODALIDADE {
+    string id PK
+    string nome UK
+  }
+  ACADEMIA_MODALIDADE {
+    string academia_id FK
+    string modalidade_id FK
+  }
+        </pre>
+      </article>
+
+      <article class="rounded border border-slate-200 bg-white p-6">
+        <h3 class="text-lg font-semibold">Fluxo principal de uso</h3>
+        <pre class="mermaid text-center">
+flowchart TD
+  A[Usuário acessa /] --> B[Repositório: listar com filtros]
+  B --> C[Renderiza cards]
+  C -->|clica| D[/academias/id/]
+  D --> E[Repositório: obterPorId]
+  E -->|encontrado| F[Tela de detalhes]
+  E -->|null| G[404 personalizada]
+        </pre>
+      </article>
+    </section>
+
+    <!-- Qualidade -->
+    <section id="qualidade" class="space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">Qualidade e testes</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded border border-slate-200 bg-white p-5">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Vitest — testes unitários</p>
+          <p class="mt-2 text-3xl font-bold brand">10 / 10</p>
+          <p class="mt-1 text-sm text-slate-600">Cobrem filtros, ordenação, busca por id e listagens auxiliares do repositório.</p>
+        </div>
+        <div class="rounded border border-slate-200 bg-white p-5">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Playwright — e2e</p>
+          <p class="mt-2 text-3xl font-bold brand">6 / 6</p>
+          <p class="mt-1 text-sm text-slate-600">Validam home, filtros, detalhes, 404 e Sobre no navegador Chromium.</p>
+        </div>
+      </div>
+      <p class="text-slate-700">
+        Os refinamentos aplicados na Extensão VII incluem: busca tolerante a acentos (normalização
+        Unicode NFD), <code>aria-label</code> em todos os campos de filtro, estados <em>focus-visible</em>
+        acessíveis e <code>aria-live</code> para o contador de resultados.
+      </p>
+    </section>
+
+    <!-- Execução -->
+    <section id="execucao" class="space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">Como executar localmente</h2>
+      <pre class="rounded bg-slate-900 p-4 text-sm text-slate-100 overflow-x-auto"><code>git clone https://github.com/higorseixas/academias-londrina
+cd academias-londrina
+npm install
+npx prisma migrate deploy   # cria o SQLite a partir das migrations
+npx prisma db seed          # popula com 15 academias
+npm run db:export           # gera src/data/academias.json
+npm run dev                 # http://localhost:3000</code></pre>
+
+      <h3 class="pt-2 text-lg font-semibold">Comandos úteis</h3>
+      <ul class="list-inside list-disc space-y-1 text-sm text-slate-700">
+        <li><code>npm test</code> — roda os 10 testes Vitest</li>
+        <li><code>npm run test:e2e</code> — roda os 6 testes Playwright</li>
+        <li><code>npm run build</code> — build de produção</li>
+      </ul>
+    </section>
+
+    <!-- Linha do tempo -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-slate-900">Linha do tempo das extensões</h2>
+      <ol class="relative space-y-4 border-l-2 border-[var(--brand)]/40 pl-6">
+        <li><strong>Extensão I</strong> — Tema e justificativa (ago/2025)</li>
+        <li><strong>Extensão II</strong> — Requisitos e protótipos (set/2025)</li>
+        <li><strong>Extensão III</strong> — UML, DER e Portugol (out/2025)</li>
+        <li><strong>Extensão IV</strong> — Classes, lógica inicial e tecnologias (nov/2025)</li>
+        <li><strong>Extensão V</strong> — Telas, lógica intermediária e banco (abr/2026)</li>
+        <li><strong>Extensão VI</strong> — Integração e testes manuais (jul/2026)</li>
+        <li><strong>Extensão VII</strong> — Testes automatizados, refinamento, deploy e docs (nov/2026)</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="border-t bg-white">
+    <div class="mx-auto max-w-5xl px-6 py-6 text-center text-xs text-slate-600">
+      UniFil · Engenharia de Software (EaD) · Higor Clem Seixas · 2026
+    </div>
+  </footer>
+</body>
+</html>
