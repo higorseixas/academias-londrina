@@ -1,0 +1,8 @@
+node_modules
+.next
+.env.local
+*.log
+.DS_Store
+/playwright-report
+/test-results
+# dev.db e migrations SÃO commitados para o Vercel servir o banco read-only.

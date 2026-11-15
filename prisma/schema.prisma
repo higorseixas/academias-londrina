@@ -1,0 +1,60 @@
+// Prisma schema — espelha o DER da Extensão III
+// Projeto: Aplicativo Web para Consulta das Academias de Londrina/PR
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Academia {
+  id          String   @id @default(cuid())
+  nome        String
+  descricao   String?
+  telefone    String?
+  siteUrl     String?
+  instagram   String?
+
+  endereco    Endereco?
+  modalidades AcademiaModalidade[]
+
+  createdAt DateTime @default(now())
+}
+
+model Endereco {
+  id         String  @id @default(cuid())
+  academiaId String  @unique
+  academia   Academia @relation(fields: [academiaId], references: [id], onDelete: Cascade)
+
+  rua       String
+  numero    String
+  bairro    String
+  cidade    String  @default("Londrina")
+  estado    String  @default("PR")
+  cep       String?
+  latitude  Float?
+  longitude Float?
+
+  @@index([bairro])
+}
+
+model Modalidade {
+  id    String @id @default(cuid())
+  nome  String @unique
+
+  academias AcademiaModalidade[]
+}
+
+model AcademiaModalidade {
+  academiaId   String
+  modalidadeId String
+
+  academia   Academia   @relation(fields: [academiaId], references: [id], onDelete: Cascade)
+  modalidade Modalidade @relation(fields: [modalidadeId], references: [id], onDelete: Cascade)
+
+  @@id([academiaId, modalidadeId])
+  @@index([modalidadeId])
+}
