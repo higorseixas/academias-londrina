@@ -5,8 +5,8 @@
   "description": "Aplicativo Web para Consulta das Academias de Londrina/PR - Extensão V - UniFil",
   "scripts": {
     "dev": "next dev",
-    "postinstall": "prisma generate",
-    "build": "prisma generate && next build",
+    "build": "next build",
+    "db:export": "tsx scripts/export-db-to-json.ts",
     "start": "next start",
     "lint": "next lint",
     "db:migrate": "prisma migrate dev --name init",

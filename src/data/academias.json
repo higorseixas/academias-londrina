@@ -1,0 +1,697 @@
+{
+  "academias": [
+    {
+      "id": "cmo649o50000a1gdbumizjh85",
+      "nome": "Academia Força Livre",
+      "descricao": "Academia completa com foco em musculação e treino funcional, estrutura moderna no centro.",
+      "telefone": "(43) 3321-1001",
+      "siteUrl": "https://forcalivre.example.com",
+      "instagram": "@forcalivreacademia",
+      "createdAt": "2026-04-19T18:45:52.885Z",
+      "endereco": {
+        "id": "cmo649o50000b1gdby1w0hxw1",
+        "academiaId": "cmo649o50000a1gdbumizjh85",
+        "rua": "Rua Minas Gerais",
+        "numero": "450",
+        "bairro": "Centro",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86010-907",
+        "latitude": -23.3103,
+        "longitude": -51.1628
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o50000a1gdbumizjh85",
+          "modalidadeId": "cmo649o4u00001gdbrvudc4xd",
+          "modalidade": {
+            "id": "cmo649o4u00001gdbrvudc4xd",
+            "nome": "Musculação"
+          }
+        },
+        {
+          "academiaId": "cmo649o50000a1gdbumizjh85",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        },
+        {
+          "academiaId": "cmo649o50000a1gdbumizjh85",
+          "modalidadeId": "cmo649o4z00081gdbpw6yudgf",
+          "modalidade": {
+            "id": "cmo649o4z00081gdbpw6yudgf",
+            "nome": "Spinning"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5c000o1gdbeq1q848y",
+      "nome": "Academia Igapó Fitness",
+      "descricao": "Academia com vista para o lago Igapó, piscina semi-olímpica e sala de musculação ampla.",
+      "telefone": "(43) 3328-8008",
+      "siteUrl": "https://igapofitness.example.com",
+      "instagram": "@igapofitness",
+      "createdAt": "2026-04-19T18:45:52.896Z",
+      "endereco": {
+        "id": "cmo649o5c000p1gdbid2cpy83",
+        "academiaId": "cmo649o5c000o1gdbeq1q848y",
+        "rua": "Avenida Higienópolis",
+        "numero": "2800",
+        "bairro": "Igapó",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86015-400",
+        "latitude": -23.297,
+        "longitude": -51.1545
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5c000o1gdbeq1q848y",
+          "modalidadeId": "cmo649o4u00001gdbrvudc4xd",
+          "modalidade": {
+            "id": "cmo649o4u00001gdbrvudc4xd",
+            "nome": "Musculação"
+          }
+        },
+        {
+          "academiaId": "cmo649o5c000o1gdbeq1q848y",
+          "modalidadeId": "cmo649o4w00031gdbmw1ggmt3",
+          "modalidade": {
+            "id": "cmo649o4w00031gdbmw1ggmt3",
+            "nome": "Yoga"
+          }
+        },
+        {
+          "academiaId": "cmo649o5c000o1gdbeq1q848y",
+          "modalidadeId": "cmo649o4x00051gdbo5mwqjot",
+          "modalidade": {
+            "id": "cmo649o4x00051gdbo5mwqjot",
+            "nome": "Natação"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o59000k1gdbxzu5bxn2",
+      "nome": "Academia Kennedy Shape",
+      "descricao": "Academia de bairro com preço acessível, aulas coletivas e sala de musculação completa.",
+      "telefone": "(43) 3326-6006",
+      "siteUrl": null,
+      "instagram": "@kennedyshape",
+      "createdAt": "2026-04-19T18:45:52.894Z",
+      "endereco": {
+        "id": "cmo649o59000l1gdb5imwfsgy",
+        "academiaId": "cmo649o59000k1gdbxzu5bxn2",
+        "rua": "Rua Serra do Cadeado",
+        "numero": "80",
+        "bairro": "Conjunto Kennedy",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86072-680",
+        "latitude": -23.354,
+        "longitude": -51.1845
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o59000k1gdbxzu5bxn2",
+          "modalidadeId": "cmo649o4u00001gdbrvudc4xd",
+          "modalidade": {
+            "id": "cmo649o4u00001gdbrvudc4xd",
+            "nome": "Musculação"
+          }
+        },
+        {
+          "academiaId": "cmo649o59000k1gdbxzu5bxn2",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        },
+        {
+          "academiaId": "cmo649o59000k1gdbxzu5bxn2",
+          "modalidadeId": "cmo649o4z00091gdbg1l1u946",
+          "modalidade": {
+            "id": "cmo649o4z00091gdbg1l1u946",
+            "nome": "Zumba"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o57000g1gdbc0n1wbct",
+      "nome": "Academia Palhano Fit",
+      "descricao": "Academia premium na Gleba Palhano com piscina aquecida, musculação e aulas coletivas.",
+      "telefone": "(43) 3324-4004",
+      "siteUrl": "https://palhanofit.example.com",
+      "instagram": "@palhanofit",
+      "createdAt": "2026-04-19T18:45:52.892Z",
+      "endereco": {
+        "id": "cmo649o57000h1gdbxye1inb1",
+        "academiaId": "cmo649o57000g1gdbc0n1wbct",
+        "rua": "Avenida Ayrton Senna da Silva",
+        "numero": "1500",
+        "bairro": "Gleba Palhano",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86050-460",
+        "latitude": -23.336,
+        "longitude": -51.179
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o57000g1gdbc0n1wbct",
+          "modalidadeId": "cmo649o4u00001gdbrvudc4xd",
+          "modalidade": {
+            "id": "cmo649o4u00001gdbrvudc4xd",
+            "nome": "Musculação"
+          }
+        },
+        {
+          "academiaId": "cmo649o57000g1gdbc0n1wbct",
+          "modalidadeId": "cmo649o4x00051gdbo5mwqjot",
+          "modalidade": {
+            "id": "cmo649o4x00051gdbo5mwqjot",
+            "nome": "Natação"
+          }
+        },
+        {
+          "academiaId": "cmo649o57000g1gdbc0n1wbct",
+          "modalidadeId": "cmo649o4z00081gdbpw6yudgf",
+          "modalidade": {
+            "id": "cmo649o4z00081gdbpw6yudgf",
+            "nome": "Spinning"
+          }
+        },
+        {
+          "academiaId": "cmo649o57000g1gdbc0n1wbct",
+          "modalidadeId": "cmo649o4z00091gdbg1l1u946",
+          "modalidade": {
+            "id": "cmo649o4z00091gdbg1l1u946",
+            "nome": "Zumba"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5h00101gdb7dwpiy8u",
+      "nome": "Academia TopFit Shangri-lá",
+      "descricao": "Academia moderna no Shangri-lá com musculação, funcional e spinning.",
+      "telefone": "(43) 3334-4444",
+      "siteUrl": null,
+      "instagram": "@topfitshangrila",
+      "createdAt": "2026-04-19T18:45:52.902Z",
+      "endereco": {
+        "id": "cmo649o5h00111gdbeg6978ne",
+        "academiaId": "cmo649o5h00101gdb7dwpiy8u",
+        "rua": "Rua Ibiporã",
+        "numero": "75",
+        "bairro": "Shangri-lá",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86070-010",
+        "latitude": -23.351,
+        "longitude": -51.1975
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5h00101gdb7dwpiy8u",
+          "modalidadeId": "cmo649o4u00001gdbrvudc4xd",
+          "modalidade": {
+            "id": "cmo649o4u00001gdbrvudc4xd",
+            "nome": "Musculação"
+          }
+        },
+        {
+          "academiaId": "cmo649o5h00101gdb7dwpiy8u",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        },
+        {
+          "academiaId": "cmo649o5h00101gdb7dwpiy8u",
+          "modalidadeId": "cmo649o4z00081gdbpw6yudgf",
+          "modalidade": {
+            "id": "cmo649o4z00081gdbpw6yudgf",
+            "nome": "Spinning"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5f000u1gdbmyufbsmj",
+      "nome": "Academia Vida Ativa",
+      "descricao": "Academia de bairro com ótimo custo-benefício e turmas de dança fitness.",
+      "telefone": "(43) 3331-1111",
+      "siteUrl": null,
+      "instagram": "@vidaativacad",
+      "createdAt": "2026-04-19T18:45:52.899Z",
+      "endereco": {
+        "id": "cmo649o5f000v1gdbkxfhttik",
+        "academiaId": "cmo649o5f000u1gdbmyufbsmj",
+        "rua": "Rua Paranaguá",
+        "numero": "420",
+        "bairro": "Vila Nova",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86020-770",
+        "latitude": -23.3055,
+        "longitude": -51.159
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5f000u1gdbmyufbsmj",
+          "modalidadeId": "cmo649o4u00001gdbrvudc4xd",
+          "modalidade": {
+            "id": "cmo649o4u00001gdbrvudc4xd",
+            "nome": "Musculação"
+          }
+        },
+        {
+          "academiaId": "cmo649o5f000u1gdbmyufbsmj",
+          "modalidadeId": "cmo649o4z00081gdbpw6yudgf",
+          "modalidade": {
+            "id": "cmo649o4z00081gdbpw6yudgf",
+            "nome": "Spinning"
+          }
+        },
+        {
+          "academiaId": "cmo649o5f000u1gdbmyufbsmj",
+          "modalidadeId": "cmo649o4z00091gdbg1l1u946",
+          "modalidade": {
+            "id": "cmo649o4z00091gdbg1l1u946",
+            "nome": "Zumba"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5g000w1gdb1gv1yca5",
+      "nome": "Arena Funcional Londrina",
+      "descricao": "Centro de treinamento funcional ao ar livre com equipamentos modernos e turmas em grupo.",
+      "telefone": "(43) 3332-2222",
+      "siteUrl": "https://arenafuncional.example.com",
+      "instagram": "@arenafuncional",
+      "createdAt": "2026-04-19T18:45:52.900Z",
+      "endereco": {
+        "id": "cmo649o5g000x1gdb4dmzb4qq",
+        "academiaId": "cmo649o5g000w1gdb1gv1yca5",
+        "rua": "Rua Pará",
+        "numero": "890",
+        "bairro": "Jardim Bancários",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86030-380",
+        "latitude": -23.322,
+        "longitude": -51.186
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5g000w1gdb1gv1yca5",
+          "modalidadeId": "cmo649o4w00021gdbqeod9wb0",
+          "modalidade": {
+            "id": "cmo649o4w00021gdbqeod9wb0",
+            "nome": "CrossFit"
+          }
+        },
+        {
+          "academiaId": "cmo649o5g000w1gdb1gv1yca5",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5d000q1gdboi108cv4",
+      "nome": "BoxFight Academia",
+      "descricao": "Academia de lutas com foco em boxe, muay thai e condicionamento físico.",
+      "telefone": "(43) 3329-9009",
+      "siteUrl": null,
+      "instagram": "@boxfightld",
+      "createdAt": "2026-04-19T18:45:52.897Z",
+      "endereco": {
+        "id": "cmo649o5d000r1gdbyx3cp0r6",
+        "academiaId": "cmo649o5d000q1gdboi108cv4",
+        "rua": "Rua Goiás",
+        "numero": "1750",
+        "bairro": "Centro",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86010-500",
+        "latitude": -23.314,
+        "longitude": -51.168
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5d000q1gdboi108cv4",
+          "modalidadeId": "cmo649o4w00021gdbqeod9wb0",
+          "modalidade": {
+            "id": "cmo649o4w00021gdbqeod9wb0",
+            "nome": "CrossFit"
+          }
+        },
+        {
+          "academiaId": "cmo649o5d000q1gdboi108cv4",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        },
+        {
+          "academiaId": "cmo649o5d000q1gdboi108cv4",
+          "modalidadeId": "cmo649o4y00071gdbzx4ew30b",
+          "modalidade": {
+            "id": "cmo649o4y00071gdbzx4ew30b",
+            "nome": "Muay Thai"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5a000m1gdbonbhy3gg",
+      "nome": "Centro de Artes Marciais Samurai",
+      "descricao": "Academia especializada em artes marciais: Jiu-Jitsu, Muay Thai e defesa pessoal.",
+      "telefone": "(43) 3327-7007",
+      "siteUrl": null,
+      "instagram": "@samuraildb",
+      "createdAt": "2026-04-19T18:45:52.895Z",
+      "endereco": {
+        "id": "cmo649o5a000n1gdbsakz2fl1",
+        "academiaId": "cmo649o5a000m1gdbonbhy3gg",
+        "rua": "Rua São Salvador",
+        "numero": "200",
+        "bairro": "Shangri-lá",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86070-050",
+        "latitude": -23.3482,
+        "longitude": -51.195
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5a000m1gdbonbhy3gg",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        },
+        {
+          "academiaId": "cmo649o5a000m1gdbonbhy3gg",
+          "modalidadeId": "cmo649o4y00061gdbaca8h5qr",
+          "modalidade": {
+            "id": "cmo649o4y00061gdbaca8h5qr",
+            "nome": "Jiu-Jitsu"
+          }
+        },
+        {
+          "academiaId": "cmo649o5a000m1gdbonbhy3gg",
+          "modalidadeId": "cmo649o4y00071gdbzx4ew30b",
+          "modalidade": {
+            "id": "cmo649o4y00071gdbzx4ew30b",
+            "nome": "Muay Thai"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o56000e1gdbqkqfepvt",
+      "nome": "CrossFit Londrina Box",
+      "descricao": "Box oficial de CrossFit com treinadores certificados e turmas todos os dias.",
+      "telefone": "(43) 3323-3003",
+      "siteUrl": "https://crossfitlondrinabox.example.com",
+      "instagram": "@cflondrinabox",
+      "createdAt": "2026-04-19T18:45:52.890Z",
+      "endereco": {
+        "id": "cmo649o56000f1gdbx0ghuw3j",
+        "academiaId": "cmo649o56000e1gdbqkqfepvt",
+        "rua": "Rua Pernambuco",
+        "numero": "980",
+        "bairro": "Centro",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86020-121",
+        "latitude": -23.3095,
+        "longitude": -51.1655
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o56000e1gdbqkqfepvt",
+          "modalidadeId": "cmo649o4w00021gdbqeod9wb0",
+          "modalidade": {
+            "id": "cmo649o4w00021gdbqeod9wb0",
+            "nome": "CrossFit"
+          }
+        },
+        {
+          "academiaId": "cmo649o56000e1gdbqkqfepvt",
+          "modalidadeId": "cmo649o4x00041gdbv7f58zn6",
+          "modalidade": {
+            "id": "cmo649o4x00041gdbv7f58zn6",
+            "nome": "Funcional"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o58000i1gdbuz7mztul",
+      "nome": "Espaço Yoga Lumina",
+      "descricao": "Espaço dedicado a Yoga Hatha, Vinyasa e Ashtanga. Ambiente tranquilo e acolhedor.",
+      "telefone": "(43) 3325-5005",
+      "siteUrl": null,
+      "instagram": "@yogalumina",
+      "createdAt": "2026-04-19T18:45:52.893Z",
+      "endereco": {
+        "id": "cmo649o58000j1gdbwoewjcd7",
+        "academiaId": "cmo649o58000i1gdbuz7mztul",
+        "rua": "Rua Belo Horizonte",
+        "numero": "325",
+        "bairro": "Centro",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86020-060",
+        "latitude": -23.311,
+        "longitude": -51.164
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o58000i1gdbuz7mztul",
+          "modalidadeId": "cmo649o4v00011gdbioc7z4fv",
+          "modalidade": {
+            "id": "cmo649o4v00011gdbioc7z4fv",
+            "nome": "Pilates"
+          }
+        },
+        {
+          "academiaId": "cmo649o58000i1gdbuz7mztul",
+          "modalidadeId": "cmo649o4w00031gdbmw1ggmt3",
+          "modalidade": {
+            "id": "cmo649o4w00031gdbmw1ggmt3",
+            "nome": "Yoga"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5i00121gdb02zk16yf",
+      "nome": "Natação Aqua Londrina",
+      "descricao": "Escola de natação com piscinas aquecidas e turmas para todas as idades.",
+      "telefone": "(43) 3335-5555",
+      "siteUrl": "https://aqualondrina.example.com",
+      "instagram": "@aqualondrina",
+      "createdAt": "2026-04-19T18:45:52.903Z",
+      "endereco": {
+        "id": "cmo649o5i00131gdbvsb93w52",
+        "academiaId": "cmo649o5i00121gdb02zk16yf",
+        "rua": "Rua Tocantins",
+        "numero": "1980",
+        "bairro": "Higienópolis",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86060-290",
+        "latitude": -23.3135,
+        "longitude": -51.1725
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5i00121gdb02zk16yf",
+          "modalidadeId": "cmo649o4x00051gdbo5mwqjot",
+          "modalidade": {
+            "id": "cmo649o4x00051gdbo5mwqjot",
+            "nome": "Natação"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5e000s1gdbqpchc1al",
+      "nome": "Studio Corpore Pilates",
+      "descricao": "Studio boutique de Pilates aparelhos, com atendimento personalizado.",
+      "telefone": "(43) 3330-1010",
+      "siteUrl": null,
+      "instagram": "@studiocorpore",
+      "createdAt": "2026-04-19T18:45:52.898Z",
+      "endereco": {
+        "id": "cmo649o5e000t1gdbf8zjhseu",
+        "academiaId": "cmo649o5e000s1gdbqpchc1al",
+        "rua": "Avenida Madre Leônia Milito",
+        "numero": "650",
+        "bairro": "Gleba Palhano",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86055-670",
+        "latitude": -23.3345,
+        "longitude": -51.1772
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5e000s1gdbqpchc1al",
+          "modalidadeId": "cmo649o4v00011gdbioc7z4fv",
+          "modalidade": {
+            "id": "cmo649o4v00011gdbioc7z4fv",
+            "nome": "Pilates"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o5g000y1gdb2eirtx07",
+      "nome": "Studio Equilíbrio",
+      "descricao": "Espaço multidisciplinar: Pilates, Yoga e aulas de meditação guiada.",
+      "telefone": "(43) 3333-3333",
+      "siteUrl": null,
+      "instagram": "@studioequilibriold",
+      "createdAt": "2026-04-19T18:45:52.901Z",
+      "endereco": {
+        "id": "cmo649o5g000z1gdb24jfbv17",
+        "academiaId": "cmo649o5g000y1gdb2eirtx07",
+        "rua": "Rua Piauí",
+        "numero": "155",
+        "bairro": "Centro",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86020-320",
+        "latitude": -23.3125,
+        "longitude": -51.1635
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o5g000y1gdb2eirtx07",
+          "modalidadeId": "cmo649o4v00011gdbioc7z4fv",
+          "modalidade": {
+            "id": "cmo649o4v00011gdbioc7z4fv",
+            "nome": "Pilates"
+          }
+        },
+        {
+          "academiaId": "cmo649o5g000y1gdb2eirtx07",
+          "modalidadeId": "cmo649o4w00031gdbmw1ggmt3",
+          "modalidade": {
+            "id": "cmo649o4w00031gdbmw1ggmt3",
+            "nome": "Yoga"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmo649o54000c1gdb8suvnmps",
+      "nome": "Studio Pilates Movimento",
+      "descricao": "Estúdio especializado em Pilates clássico e contemporâneo, aulas individuais e em dupla.",
+      "telefone": "(43) 3322-2002",
+      "siteUrl": null,
+      "instagram": "@studiomovimentold",
+      "createdAt": "2026-04-19T18:45:52.888Z",
+      "endereco": {
+        "id": "cmo649o54000d1gdbzhhfmoqn",
+        "academiaId": "cmo649o54000c1gdb8suvnmps",
+        "rua": "Avenida Higienópolis",
+        "numero": "1200",
+        "bairro": "Higienópolis",
+        "cidade": "Londrina",
+        "estado": "PR",
+        "cep": "86015-010",
+        "latitude": -23.312,
+        "longitude": -51.171
+      },
+      "modalidades": [
+        {
+          "academiaId": "cmo649o54000c1gdb8suvnmps",
+          "modalidadeId": "cmo649o4v00011gdbioc7z4fv",
+          "modalidade": {
+            "id": "cmo649o4v00011gdbioc7z4fv",
+            "nome": "Pilates"
+          }
+        },
+        {
+          "academiaId": "cmo649o54000c1gdb8suvnmps",
+          "modalidadeId": "cmo649o4w00031gdbmw1ggmt3",
+          "modalidade": {
+            "id": "cmo649o4w00031gdbmw1ggmt3",
+            "nome": "Yoga"
+          }
+        }
+      ]
+    }
+  ],
+  "modalidades": [
+    {
+      "id": "cmo649o4w00021gdbqeod9wb0",
+      "nome": "CrossFit"
+    },
+    {
+      "id": "cmo649o4x00041gdbv7f58zn6",
+      "nome": "Funcional"
+    },
+    {
+      "id": "cmo649o4y00061gdbaca8h5qr",
+      "nome": "Jiu-Jitsu"
+    },
+    {
+      "id": "cmo649o4y00071gdbzx4ew30b",
+      "nome": "Muay Thai"
+    },
+    {
+      "id": "cmo649o4u00001gdbrvudc4xd",
+      "nome": "Musculação"
+    },
+    {
+      "id": "cmo649o4x00051gdbo5mwqjot",
+      "nome": "Natação"
+    },
+    {
+      "id": "cmo649o4v00011gdbioc7z4fv",
+      "nome": "Pilates"
+    },
+    {
+      "id": "cmo649o4z00081gdbpw6yudgf",
+      "nome": "Spinning"
+    },
+    {
+      "id": "cmo649o4w00031gdbmw1ggmt3",
+      "nome": "Yoga"
+    },
+    {
+      "id": "cmo649o4z00091gdbg1l1u946",
+      "nome": "Zumba"
+    }
+  ],
+  "bairros": [
+    "Centro",
+    "Conjunto Kennedy",
+    "Gleba Palhano",
+    "Higienópolis",
+    "Igapó",
+    "Jardim Bancários",
+    "Shangri-lá",
+    "Vila Nova"
+  ]
+}

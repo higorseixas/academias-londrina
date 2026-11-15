@@ -2,8 +2,13 @@
 // Implementação direta do pseudocódigo em Portugol definido na Extensão III (seção 3):
 // - listarAcademias(filtros): aplica filtros por bairro, modalidade e termo livre
 // - obterDetalhesAcademia(id): retorna academia com endereço e modalidades
+//
+// Fonte dos dados: src/data/academias.json, exportado do banco SQLite via
+// scripts/export-db-to-json.ts. Essa escolha mantém o modelo Prisma como
+// fonte da verdade no desenvolvimento e permite deploy em qualquer ambiente
+// serverless (Vercel, Cloudflare) sem depender de filesystem gravável.
 
-import { prisma } from "./db";
+import dados from "@/data/academias.json";
 
 export type FiltroConsulta = {
   bairro?: string;
@@ -39,6 +44,8 @@ export type AcademiaDetalhes = {
   modalidades: { id: string; nome: string }[];
 };
 
+type AcademiaCrua = (typeof dados)["academias"][number];
+
 // Normaliza string removendo acentos e caixa, para busca tolerante a diacríticos.
 // Refinamento aplicado na Extensão VII: antes, a busca por "igapo" (sem acento)
 // não retornava "Academia Igapó Fitness"; agora retorna.
@@ -53,24 +60,14 @@ function normalizar(texto: string): string {
 export async function listar(filtros: FiltroConsulta = {}): Promise<AcademiaResumo[]> {
   const termo = filtros.termoLivre ? normalizar(filtros.termoLivre) : null;
 
-  const academias = await prisma.academia.findMany({
-    where: {
-      AND: [
-        filtros.bairro ? { endereco: { is: { bairro: filtros.bairro } } } : {},
-        filtros.modalidadeId
-          ? { modalidades: { some: { modalidadeId: filtros.modalidadeId } } }
-          : {},
-      ],
-    },
-    include: {
-      endereco: true,
-      modalidades: { include: { modalidade: true } },
-    },
-    orderBy: { nome: "asc" },
-  });
-
-  return academias
+  return (dados.academias as AcademiaCrua[])
     .filter((a) => a.endereco !== null)
+    .filter((a) => !filtros.bairro || a.endereco!.bairro === filtros.bairro)
+    .filter(
+      (a) =>
+        !filtros.modalidadeId ||
+        a.modalidades.some((m) => m.modalidadeId === filtros.modalidadeId),
+    )
     .filter((a) => {
       if (!termo) return true;
       const alvo = normalizar(`${a.nome} ${a.descricao ?? ""}`);
@@ -86,14 +83,7 @@ export async function listar(filtros: FiltroConsulta = {}): Promise<AcademiaResu
 }
 
 export async function obterPorId(id: string): Promise<AcademiaDetalhes | null> {
-  const a = await prisma.academia.findUnique({
-    where: { id },
-    include: {
-      endereco: true,
-      modalidades: { include: { modalidade: true } },
-    },
-  });
-
+  const a = (dados.academias as AcademiaCrua[]).find((x) => x.id === id);
   if (!a) return null;
 
   return {
@@ -115,19 +105,17 @@ export async function obterPorId(id: string): Promise<AcademiaDetalhes | null> {
           longitude: a.endereco.longitude,
         }
       : null,
-    modalidades: a.modalidades.map((m) => ({ id: m.modalidade.id, nome: m.modalidade.nome })),
+    modalidades: a.modalidades.map((m) => ({
+      id: m.modalidade.id,
+      nome: m.modalidade.nome,
+    })),
   };
 }
 
 export async function listarBairros(): Promise<string[]> {
-  const rows = await prisma.endereco.findMany({
-    select: { bairro: true },
-    distinct: ["bairro"],
-    orderBy: { bairro: "asc" },
-  });
-  return rows.map((r) => r.bairro);
+  return dados.bairros as string[];
 }
 
 export async function listarModalidades(): Promise<{ id: string; nome: string }[]> {
-  return prisma.modalidade.findMany({ orderBy: { nome: "asc" } });
+  return dados.modalidades.map((m) => ({ id: m.id, nome: m.nome }));
 }
